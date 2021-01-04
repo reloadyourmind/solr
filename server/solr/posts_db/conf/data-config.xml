@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataConfig>
+  <dataSource type="JdbcDataSource" 
+              driver="org.mariadb.jdbc.Driver"
+              url="jdbc:mysql://localhost:3306/minsknews" 
+              user="root" 
+              password="root"/>
+  <document>
+
+    <entity name="posts"
+    query="select p.id,p.post_title,u.display_name,p.post_status,p.post_modified,p.post_name from mn_posts p inner join mn_users u ON p.post_author = u.id where post_type='post' AND post_status='publish'"
+    deltaImportQuery="select p.id,p.post_title,u.display_name,p.post_status,p.post_modified,p.post_name from mn_posts p inner join mn_users u ON p.post_author = u.id where post_type='post' AND post_status='publish' AND id='${dih.delta.id}'"
+    >
+    <field column="ID" name="id"/>
+    <field column="post_title" name="post_title"/>
+    <field column="display_name" name="display_name"/>
+
+    <field column="post_status" name="post_status"/>
+    <field column="post_name" name="post_name"/>
+
+    <field column="post_modified" name="post_modified"/>
+    </entity>
+  </document>
+</dataConfig>

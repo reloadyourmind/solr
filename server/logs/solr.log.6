@@ -1,0 +1,72 @@
+2020-12-21 15:40:38.670 INFO  (main) [   ] o.e.j.u.log Logging initialized @5204ms to org.eclipse.jetty.util.log.Slf4jLog
+2020-12-21 15:40:38.947 WARN  (main) [   ] o.e.j.x.XmlConfiguration Ignored arg: <Arg name="threadpool">
+    <New id="threadpool" class="com.codahale.metrics.jetty9.InstrumentedQueuedThreadPool"><Arg name="registry">
+        <Call id="solrJettyMetricRegistry" name="getOrCreate" class="com.codahale.metrics.SharedMetricRegistries"><Arg>solr.jetty</Arg></Call>
+      </Arg></New>
+  </Arg>
+2020-12-21 15:40:39.367 INFO  (main) [   ] o.e.j.s.Server jetty-9.4.27.v20200227; built: 2020-02-27T18:37:21.340Z; git: a304fd9f351f337e7c0e2a7c28878dd536149c6c; jvm 1.8.0_271-b09
+2020-12-21 15:40:39.424 INFO  (main) [   ] o.e.j.d.p.ScanningAppProvider Deployment monitor [file:///C:/solr-8.7.0/server/contexts/] at interval 0
+2020-12-21 15:40:39.760 WARN  (main) [   ] o.e.j.x.XmlParser FATAL@null line:103 col:2 : org.xml.sax.SAXParseException; lineNumber: 103; columnNumber: 2; The markup in the document following the root element must be well-formed.
+2020-12-21 15:40:39.760 WARN  (main) [   ] o.e.j.w.WebAppContext Failed startup of context o.e.j.w.WebAppContext@272113c4{/solr,file:///C:/solr-8.7.0/server/solr-webapp/webapp/,UNAVAILABLE}{C:\solr-8.7.0\server/solr-webapp/webapp} => org.xml.sax.SAXParseException; lineNumber: 103; columnNumber: 2; The markup in the document following the root element must be well-formed.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source)
+org.xml.sax.SAXParseException: The markup in the document following the root element must be well-formed.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(Unknown Source) ~[?:1.8.0_271]
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(Unknown Source) ~[?:1.8.0_271]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source) ~[?:1.8.0_271]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(Unknown Source) ~[?:1.8.0_271]
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(Unknown Source) ~[?:1.8.0_271]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$TrailingMiscDriver.next(Unknown Source) ~[?:1.8.0_271]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(Unknown Source) ~[?:1.8.0_271]
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(Unknown Source) ~[?:1.8.0_271]
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(Unknown Source) ~[?:1.8.0_271]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source) ~[?:1.8.0_271]
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(Unknown Source) ~[?:1.8.0_271]
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(Unknown Source) ~[?:1.8.0_271]
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(Unknown Source) ~[?:1.8.0_271]
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(Unknown Source) ~[?:1.8.0_271]
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(Unknown Source) ~[?:1.8.0_271]
+	at org.eclipse.jetty.xml.XmlParser.parse(XmlParser.java:244) ~[jetty-xml-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.webapp.Descriptor.parse(Descriptor.java:53) ~[jetty-webapp-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.webapp.WebDescriptor.parse(WebDescriptor.java:213) ~[jetty-webapp-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.webapp.MetaData.setWebXml(MetaData.java:193) ~[jetty-webapp-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.webapp.WebXmlConfiguration.preConfigure(WebXmlConfiguration.java:55) ~[jetty-webapp-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.webapp.WebAppContext.preConfigure(WebAppContext.java:488) ~[jetty-webapp-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:523) ~[jetty-webapp-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72) ~[jetty-util-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.deploy.bindings.StandardStarter.processBinding(StandardStarter.java:46) ~[jetty-deploy-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.deploy.AppLifeCycle.runBindings(AppLifeCycle.java:188) ~[jetty-deploy-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.deploy.DeploymentManager.requestAppGoal(DeploymentManager.java:513) ~[jetty-deploy-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.deploy.DeploymentManager.addApp(DeploymentManager.java:154) ~[jetty-deploy-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.deploy.providers.ScanningAppProvider.fileAdded(ScanningAppProvider.java:173) ~[jetty-deploy-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.deploy.providers.WebAppProvider.fileAdded(WebAppProvider.java:447) ~[jetty-deploy-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.deploy.providers.ScanningAppProvider$1.fileAdded(ScanningAppProvider.java:66) ~[jetty-deploy-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.util.Scanner.reportAddition(Scanner.java:784) ~[jetty-util-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.util.Scanner.reportDifferences(Scanner.java:753) ~[jetty-util-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.util.Scanner.scan(Scanner.java:641) ~[jetty-util-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.util.Scanner.doStart(Scanner.java:540) ~[jetty-util-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72) ~[jetty-util-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.deploy.providers.ScanningAppProvider.doStart(ScanningAppProvider.java:146) ~[jetty-deploy-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72) ~[jetty-util-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.deploy.DeploymentManager.startAppProvider(DeploymentManager.java:599) ~[jetty-deploy-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.deploy.DeploymentManager.doStart(DeploymentManager.java:249) ~[jetty-deploy-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72) ~[jetty-util-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.start(ContainerLifeCycle.java:169) ~[jetty-util-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.server.Server.start(Server.java:407) ~[jetty-server-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStart(ContainerLifeCycle.java:117) ~[jetty-util-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStart(AbstractHandler.java:97) ~[jetty-server-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.server.Server.doStart(Server.java:371) ~[jetty-server-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:72) ~[jetty-util-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.xml.XmlConfiguration.lambda$main$1(XmlConfiguration.java:1924) ~[jetty-xml-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_271]
+	at org.eclipse.jetty.xml.XmlConfiguration.main(XmlConfiguration.java:1873) ~[jetty-xml-9.4.27.v20200227.jar:9.4.27.v20200227]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_271]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_271]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_271]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_271]
+	at org.eclipse.jetty.start.Main.invokeMain(Main.java:218) ~[start.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.start.Main.start(Main.java:491) ~[start.jar:9.4.27.v20200227]
+	at org.eclipse.jetty.start.Main.main(Main.java:77) ~[start.jar:9.4.27.v20200227]
+2020-12-21 15:40:39.923 INFO  (main) [   ] o.e.j.s.AbstractConnector Started ServerConnector@1329eff{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2020-12-21 15:40:39.923 INFO  (main) [   ] o.e.j.s.Server Started @6459ms
+2020-12-21 15:44:39.486 INFO  (ShutdownMonitor) [   ] o.e.j.s.AbstractConnector Stopped ServerConnector@1329eff{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2020-12-21 15:44:39.495 INFO  (ShutdownMonitor) [   ] o.e.j.s.h.ContextHandler Stopped o.e.j.w.WebAppContext@272113c4{/solr,null,UNAVAILABLE}{C:\solr-8.7.0\server/solr-webapp/webapp}
