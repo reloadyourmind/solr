@@ -4,16 +4,26 @@
               driver="org.mariadb.jdbc.Driver"
               url="jdbc:mysql://localhost:3306/minsknews" 
               user="root" 
-              password="root"/>
+              password=""/>
   <document>
 
-    <entity name="posts"
-    query="select p.id,p.post_title,u.display_name,p.post_status,p.post_modified,p.post_name from mn_posts p inner join mn_users u ON p.post_author = u.id where post_type='post' AND post_status='publish'"
-    deltaImportQuery="select p.id,p.post_title,u.display_name,p.post_status,p.post_modified,p.post_name from mn_posts p inner join mn_users u ON p.post_author = u.id where post_type='post' AND post_status='publish' AND id='${dih.delta.id}'"
+     <entity name="posts"
+    query="select p.id,p.post_title,u.display_name,p.post_status,p.post_modified,p.post_name,featured_image.guid as post_image from mn_posts p 
+    inner join mn_users u ON p.post_author = u.id 
+    inner join mn_postmeta on p.id = mn_postmeta.post_id and mn_postmeta.meta_key = '_thumbnail_id' 
+    inner join mn_posts as featured_image on featured_image.id = mn_postmeta.meta_value
+    where p.post_status='publish'"
+    deltaImportQuery="select p.id,p.post_title,u.display_name,p.post_status,p.post_modified,p.post_name,featured_image.guid as post_image from mn_posts p 
+    inner join mn_users u ON p.post_author = u.id 
+    inner join mn_postmeta on p.id = mn_postmeta.post_id and mn_postmeta.meta_key = '_thumbnail_id' 
+    inner join mn_posts as featured_image on featured_image.id = mn_postmeta.meta_value
+    where p.post_status='publish' AND id='${dih.delta.id}'"
     >
     <field column="ID" name="id"/>
     <field column="post_title" name="post_title"/>
     <field column="display_name" name="display_name"/>
+
+    <field column="post_image" name="post_image"/>
 
     <field column="post_status" name="post_status"/>
     <field column="post_name" name="post_name"/>

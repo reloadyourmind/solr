@@ -115,7 +115,7 @@
     <!-- MY CUSTOM FIELDS -->
     <field name="post_title" type="string" indexed="true" stored="true" required="true" multiValued="false" />
     <field name="display_name" type="string" indexed="true" stored="true" required="true" multiValued="false" />
-
+    <field name="post_image" type="string" indexed="true" stored="true" required="true" multiValued="false" />
     <field name="post_status" type="string" indexed="true" stored="true" required="true" multiValued="false" />
     <field name="post_modified" type="pdate" indexed="true" stored="true" required="true" multiValued="false" />
     <field name="post_name" type="string" indexed="true" stored="true" required="true" multiValued="false" />

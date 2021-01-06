@@ -1,443 +1,232 @@
-2020-12-24 07:57:46.293 INFO  (main) [   ] o.e.j.u.log Logging initialized @4854ms to org.eclipse.jetty.util.log.Slf4jLog
-2020-12-24 07:57:46.648 WARN  (main) [   ] o.e.j.x.XmlConfiguration Ignored arg: <Arg name="threadpool">
+2021-01-06 08:42:46.363 INFO  (main) [   ] o.e.j.u.log Logging initialized @897ms to org.eclipse.jetty.util.log.Slf4jLog
+2021-01-06 08:42:46.411 WARN  (main) [   ] o.e.j.x.XmlConfiguration Ignored arg: <Arg name="threadpool">
     <New id="threadpool" class="com.codahale.metrics.jetty9.InstrumentedQueuedThreadPool"><Arg name="registry">
         <Call id="solrJettyMetricRegistry" name="getOrCreate" class="com.codahale.metrics.SharedMetricRegistries"><Arg>solr.jetty</Arg></Call>
       </Arg></New>
   </Arg>
-2020-12-24 07:57:47.081 INFO  (main) [   ] o.e.j.s.Server jetty-9.4.27.v20200227; built: 2020-02-27T18:37:21.340Z; git: a304fd9f351f337e7c0e2a7c28878dd536149c6c; jvm 1.8.0_271-b09
-2020-12-24 07:57:47.167 INFO  (main) [   ] o.e.j.d.p.ScanningAppProvider Deployment monitor [file:///C:/solr-8.7.0/server/contexts/] at interval 0
-2020-12-24 07:57:47.806 INFO  (main) [   ] o.e.j.w.StandardDescriptorProcessor NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
-2020-12-24 07:57:47.834 INFO  (main) [   ] o.e.j.s.session DefaultSessionIdManager workerName=node0
-2020-12-24 07:57:47.834 INFO  (main) [   ] o.e.j.s.session No SessionScavenger set, using defaults
-2020-12-24 07:57:47.842 INFO  (main) [   ] o.e.j.s.session node0 Scavenging every 600000ms
-2020-12-24 07:57:48.003 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
-2020-12-24 07:57:48.021 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 8.7.0
-2020-12-24 07:57:48.021 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
-2020-12-24 07:57:48.021 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: C:\solr-8.7.0
-2020-12-24 07:57:48.030 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2020-12-24T07:57:48.030Z
-2020-12-24 07:57:48.077 INFO  (main) [   ] o.a.s.c.SolrPaths Using system property solr.solr.home: C:\solr-8.7.0\server\solr
-2020-12-24 07:57:48.122 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from C:\solr-8.7.0\server\solr\solr.xml
-2020-12-24 07:57:48.542 INFO  (main) [   ] o.a.s.c.SolrXmlConfig MBean server found: com.sun.jmx.mbeanserver.JmxMBeanServer@163e4e87, but no JMX reporters were configured - adding default JMX reporter.
-2020-12-24 07:57:49.596 INFO  (main) [   ] o.a.s.h.c.HttpShardHandlerFactory Host whitelist initialized: WhitelistHostChecker [whitelistHosts=null, whitelistHostCheckingEnabled=true]
-2020-12-24 07:57:50.106 WARN  (main) [   ] o.e.j.u.s.S.config Trusting all certificates configured for Client@532a02d9[provider=null,keyStore=null,trustStore=null]
-2020-12-24 07:57:50.106 WARN  (main) [   ] o.e.j.u.s.S.config No Client EndPointIdentificationAlgorithm configured for Client@532a02d9[provider=null,keyStore=null,trustStore=null]
-2020-12-24 07:57:50.203 WARN  (main) [   ] o.e.j.u.s.S.config Trusting all certificates configured for Client@7249dadf[provider=null,keyStore=null,trustStore=null]
-2020-12-24 07:57:50.204 WARN  (main) [   ] o.e.j.u.s.S.config No Client EndPointIdentificationAlgorithm configured for Client@7249dadf[provider=null,keyStore=null,trustStore=null]
-2020-12-24 07:57:50.391 WARN  (main) [   ] o.a.s.c.CoreContainer Not all security plugins configured!  authentication=disabled authorization=disabled.  Solr is only as secure as you make it. Consider configuring authentication/authorization before exposing Solr to users internal or external.  See https://s.apache.org/solrsecurity for more info
-2020-12-24 07:57:50.688 INFO  (main) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
-2020-12-24 07:57:50.699 INFO  (main) [   ] o.a.s.h.a.MetricsHistoryHandler No .system collection, keeping metrics history in memory.
-2020-12-24 07:57:50.879 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.node' (registry 'solr.node') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@163e4e87
-2020-12-24 07:57:50.880 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.jvm' (registry 'solr.jvm') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@163e4e87
-2020-12-24 07:57:50.887 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.jetty' (registry 'solr.jetty') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@163e4e87
-2020-12-24 07:57:51.086 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath C:\solr-8.7.0\server\solr
-2020-12-24 07:57:51.087 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [posts_db]
-2020-12-24 07:57:51.311 INFO  (coreLoadExecutor-13-thread-1) [   x:posts_db] o.a.s.c.SolrResourceLoader Added 7 libs to classloader, from paths: [/C:/solr-8.7.0/dist, /C:/solr-8.7.0/server/solr/posts_db/lib]
-2020-12-24 07:57:51.733 INFO  (main) [   ] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@272113c4{/solr,file:///C:/solr-8.7.0/server/solr-webapp/webapp/,AVAILABLE}{C:\solr-8.7.0\server/solr-webapp/webapp}
-2020-12-24 07:57:51.755 INFO  (main) [   ] o.e.j.s.AbstractConnector Started ServerConnector@1329eff{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
-2020-12-24 07:57:51.755 INFO  (main) [   ] o.e.j.s.Server Started @10318ms
-2020-12-24 07:57:51.882 INFO  (coreLoadExecutor-13-thread-1) [   x:posts_db] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.7.0
-2020-12-24 07:57:52.093 INFO  (qtp1364767791-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=122
-2020-12-24 07:57:52.307 INFO  (coreLoadExecutor-13-thread-1) [   x:posts_db] o.a.s.s.IndexSchema Schema name=default-config
-2020-12-24 07:57:53.627 INFO  (coreLoadExecutor-13-thread-1) [   x:posts_db] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
-2020-12-24 07:57:53.668 INFO  (coreLoadExecutor-13-thread-1) [   x:posts_db] o.a.s.c.CoreContainer Creating SolrCore 'posts_db' using configuration from instancedir C:\solr-8.7.0\server\solr\posts_db, trusted=true
-2020-12-24 07:57:53.692 INFO  (coreLoadExecutor-13-thread-1) [   x:posts_db] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.core.posts_db' (registry 'solr.core.posts_db') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@163e4e87
-2020-12-24 07:57:53.748 INFO  (coreLoadExecutor-13-thread-1) [   x:posts_db] o.a.s.c.SolrCore [[posts_db] ] Opening new SolrCore at [C:\solr-8.7.0\server\solr\posts_db], dataDir=[C:\solr-8.7.0\server\solr\posts_db\data\]
-2020-12-24 07:57:54.527 WARN  (coreLoadExecutor-13-thread-1) [   x:posts_db] o.a.s.h.d.DataImportHandler Data Import Handler is deprecated as of Solr 8.6. See SOLR-14066 for more details.
-2020-12-24 07:57:54.558 INFO  (coreLoadExecutor-13-thread-1) [   x:posts_db] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
-2020-12-24 07:57:54.559 INFO  (coreLoadExecutor-13-thread-1) [   x:posts_db] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
-2020-12-24 07:57:54.691 INFO  (coreLoadExecutor-13-thread-1) [   x:posts_db] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
-2020-12-24 07:57:54.691 INFO  (coreLoadExecutor-13-thread-1) [   x:posts_db] o.a.s.u.CommitTracker Soft AutoCommit: disabled
-2020-12-24 07:57:55.505 INFO  (coreLoadExecutor-13-thread-1) [   x:posts_db] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: C:\solr-8.7.0\server\solr\posts_db\conf
-2020-12-24 07:57:55.537 INFO  (coreLoadExecutor-13-thread-1) [   x:posts_db] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
-2020-12-24 07:57:55.549 INFO  (coreLoadExecutor-13-thread-1) [   x:posts_db] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
-2020-12-24 07:57:55.565 INFO  (coreLoadExecutor-13-thread-1) [   x:posts_db] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
-2020-12-24 07:57:55.635 INFO  (searcherExecutor-15-thread-1-processing-x:posts_db) [   x:posts_db] o.a.s.c.QuerySenderListener QuerySenderListener done.
-2020-12-24 07:57:55.635 INFO  (searcherExecutor-15-thread-1-processing-x:posts_db) [   x:posts_db] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
-2020-12-24 07:57:55.645 INFO  (searcherExecutor-15-thread-1-processing-x:posts_db) [   x:posts_db] o.a.s.c.SolrCore [posts_db]  Registered new searcher autowarm time: 0 ms
-2020-12-24 08:27:00.967 INFO  (qtp1364767791-18) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:МВД&sort=post_modified+desc&rows=10&wt=json} hits=245 status=0 QTime=282
-2020-12-24 08:57:32.721 INFO  (qtp1364767791-23) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:мвд&sort=post_modified+desc&rows=10&wt=json} hits=245 status=0 QTime=1
-2020-12-24 08:57:41.635 INFO  (qtp1364767791-15) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:м&sort=post_modified+desc&rows=10&wt=json} hits=126 status=0 QTime=66
-2020-12-24 08:57:59.484 INFO  (qtp1364767791-24) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:Логовик&sort=post_modified+desc&rows=10&wt=json} hits=4510 status=0 QTime=86
-2020-12-24 09:02:53.165 INFO  (qtp1364767791-16) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:логовик&sort=post_modified+desc&rows=10&wt=json} hits=4510 status=0 QTime=0
-2020-12-26 10:28:30.199 INFO  (qtp1364767791-19) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:мвд&sort=post_modified+desc&rows=10&wt=json} hits=245 status=0 QTime=1311
-2020-12-26 10:29:04.280 INFO  (qtp1364767791-15) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:м&sort=post_modified+desc&rows=10&wt=json} hits=126 status=0 QTime=53
-2020-12-26 10:37:09.035 INFO  (qtp1364767791-18) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:тест&sort=post_modified+desc&rows=10&wt=json} hits=42 status=0 QTime=1325
-2020-12-26 10:38:20.887 INFO  (qtp1364767791-15) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:тест&sort=post_modified+desc&rows=10&wt=json} hits=42 status=0 QTime=0
-2020-12-26 10:42:22.111 INFO  (qtp1364767791-24) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:тест&sort=post_modified+desc&rows=10&wt=json} hits=42 status=0 QTime=0
-2020-12-26 10:47:22.187 INFO  (qtp1364767791-24) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:тест&sort=post_modified+desc&rows=10&wt=json} hits=42 status=0 QTime=0
-2020-12-26 10:49:45.406 INFO  (qtp1364767791-20) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:тест&sort=post_modified+desc&rows=10&wt=json} hits=42 status=0 QTime=68
-2020-12-26 11:16:52.855 INFO  (qtp1364767791-16) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:тест&sort=post_modified+desc&rows=10&wt=json} hits=42 status=0 QTime=104
-2020-12-26 11:19:26.789 INFO  (qtp1364767791-15) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:тест&sort=post_modified+desc&rows=10&wt=json} hits=42 status=0 QTime=0
-2020-12-26 11:20:33.879 INFO  (qtp1364767791-22) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:тест&sort=post_modified+desc&rows=10&wt=json} hits=42 status=0 QTime=0
-2020-12-26 11:25:27.228 INFO  (qtp1364767791-23) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:тест&sort=post_modified+desc&rows=10&wt=json} hits=42 status=0 QTime=0
-2020-12-26 11:26:47.993 INFO  (qtp1364767791-19) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:тест&sort=post_modified+desc&rows=10&wt=json} hits=42 status=0 QTime=10
-2020-12-26 11:27:16.581 INFO  (qtp1364767791-18) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:тест&sort=post_modified+desc&rows=10&wt=json} hits=42 status=0 QTime=0
-2020-12-26 11:27:46.851 INFO  (qtp1364767791-24) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:тест&sort=post_modified+desc&rows=10&wt=json} hits=42 status=0 QTime=0
-2020-12-26 11:34:29.952 INFO  (qtp1364767791-20) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:тест&sort=post_modified+desc&rows=10&wt=json} hits=42 status=0 QTime=65
-2020-12-26 11:35:49.506 INFO  (qtp1364767791-19) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:тест&sort=post_modified+desc&rows=10&wt=json} hits=42 status=0 QTime=132
-2020-12-26 11:38:32.953 INFO  (qtp1364767791-19) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:тест&sort=post_modified+desc&rows=10&wt=json} hits=42 status=0 QTime=0
-2020-12-26 11:41:19.893 INFO  (qtp1364767791-19) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:мвд&sort=post_modified+desc&rows=10&wt=json} hits=245 status=0 QTime=24
-2020-12-26 11:43:58.640 INFO  (qtp1364767791-21) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:дом&sort=post_modified+desc&rows=10&wt=json} hits=255 status=0 QTime=380
-2020-12-26 11:44:17.027 INFO  (qtp1364767791-18) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:мвд&sort=post_modified+desc&rows=10&wt=json} hits=245 status=0 QTime=0
-2020-12-26 11:44:45.438 INFO  (qtp1364767791-22) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:мвд&sort=post_modified+desc&rows=10&wt=json} hits=245 status=0 QTime=13
-2020-12-26 11:44:50.645 INFO  (qtp1364767791-24) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:дом&sort=post_modified+desc&rows=10&wt=json} hits=255 status=0 QTime=0
-2020-12-26 11:46:16.892 INFO  (qtp1364767791-18) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:тест&sort=post_modified+desc&rows=10&wt=json} hits=42 status=0 QTime=1
-2020-12-26 11:46:20.924 INFO  (qtp1364767791-24) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:мвд&sort=post_modified+desc&rows=10&wt=json} hits=245 status=0 QTime=0
-2020-12-26 11:55:44.560 INFO  (qtp1364767791-15) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:v&sort=post_modified+desc&rows=10&wt=json} hits=12 status=0 QTime=176
-2020-12-26 11:56:16.110 INFO  (qtp1364767791-24) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:v&sort=post_modified+desc&rows=10&wt=json} hits=12 status=0 QTime=0
-2020-12-26 11:56:42.908 INFO  (qtp1364767791-19) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:v&sort=post_modified+desc&rows=10&wt=json} hits=12 status=0 QTime=0
-2020-12-26 12:01:59.133 INFO  (qtp1364767791-23) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:м&sort=post_modified+desc&rows=10&wt=json} hits=126 status=0 QTime=1
-2020-12-26 12:02:45.785 INFO  (qtp1364767791-19) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:м&sort=post_modified+desc&rows=10&wt=json} hits=126 status=0 QTime=1
-2020-12-26 12:07:29.368 INFO  (qtp1364767791-15) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:d&sort=post_modified+desc&rows=10&wt=json} hits=7 status=0 QTime=67
-2020-12-26 12:08:26.925 INFO  (qtp1364767791-19) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:d&sort=post_modified+desc&rows=10&wt=json} hits=7 status=0 QTime=12
-2020-12-26 12:08:30.869 INFO  (qtp1364767791-23) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:dd&sort=post_modified+desc&rows=10&wt=json} hits=0 status=0 QTime=32
-2020-12-26 12:09:50.047 INFO  (qtp1364767791-19) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:d&sort=post_modified+desc&rows=10&wt=json} hits=7 status=0 QTime=0
-2020-12-26 12:10:25.171 INFO  (qtp1364767791-23) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:d&sort=post_modified+desc&rows=10&wt=json} hits=7 status=0 QTime=19
-2020-12-26 12:11:23.117 INFO  (qtp1364767791-23) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:d&sort=post_modified+desc&rows=10&wt=json} hits=7 status=0 QTime=0
-2020-12-26 12:11:24.060 ERROR (qtp1364767791-19) [   x:posts_db] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: org.apache.solr.search.SyntaxError: Cannot parse 'search:': Encountered "<EOF>" at line 1, column 7.
-Was expecting one of:
-    <BAREOPER> ...
-    "(" ...
-    "*" ...
-    <QUOTED> ...
-    <TERM> ...
-    <PREFIXTERM> ...
-    <WILDTERM> ...
-    <REGEXPTERM> ...
-    "[" ...
-    "{" ...
-    <LPARAMS> ...
-    "filter(" ...
-    <NUMBER> ...
-    
-	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:220)
-	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:337)
-	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:214)
-	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2627)
-	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:795)
-	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:568)
-	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:415)
-	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
-	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
-	at org.eclipse.jetty.servlets.CrossOriginFilter.handle(CrossOriginFilter.java:310)
-	at org.eclipse.jetty.servlets.CrossOriginFilter.doFilter(CrossOriginFilter.java:264)
-	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1596)
-	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
-	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
-	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:590)
-	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
-	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)
-	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
-	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
-	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1300)
-	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
-	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
-	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
-	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
-	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1215)
-	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
-	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:221)
-	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177)
-	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
-	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
-	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322)
-	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
-	at org.eclipse.jetty.server.Server.handle(Server.java:500)
-	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
-	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
-	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
-	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
-	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
-	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
-	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
-	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
-	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
-	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
-	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
-	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
-	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
-	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
-	at java.lang.Thread.run(Unknown Source)
-Caused by: org.apache.solr.search.SyntaxError: Cannot parse 'search:': Encountered "<EOF>" at line 1, column 7.
-Was expecting one of:
-    <BAREOPER> ...
-    "(" ...
-    "*" ...
-    <QUOTED> ...
-    <TERM> ...
-    <PREFIXTERM> ...
-    <WILDTERM> ...
-    <REGEXPTERM> ...
-    "[" ...
-    "{" ...
-    <LPARAMS> ...
-    "filter(" ...
-    <NUMBER> ...
-    
-	at org.apache.solr.parser.SolrQueryParserBase.parse(SolrQueryParserBase.java:274)
-	at org.apache.solr.search.LuceneQParser.parse(LuceneQParser.java:49)
-	at org.apache.solr.search.QParser.getQuery(QParser.java:174)
-	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:162)
-	... 47 more
-Caused by: org.apache.solr.parser.ParseException: Encountered "<EOF>" at line 1, column 7.
-Was expecting one of:
-    <BAREOPER> ...
-    "(" ...
-    "*" ...
-    <QUOTED> ...
-    <TERM> ...
-    <PREFIXTERM> ...
-    <WILDTERM> ...
-    <REGEXPTERM> ...
-    "[" ...
-    "{" ...
-    <LPARAMS> ...
-    "filter(" ...
-    <NUMBER> ...
-    
-	at org.apache.solr.parser.QueryParser.generateParseException(QueryParser.java:885)
-	at org.apache.solr.parser.QueryParser.jj_consume_token(QueryParser.java:767)
-	at org.apache.solr.parser.QueryParser.Clause(QueryParser.java:325)
-	at org.apache.solr.parser.QueryParser.Query(QueryParser.java:162)
-	at org.apache.solr.parser.QueryParser.TopLevelQuery(QueryParser.java:131)
-	at org.apache.solr.parser.SolrQueryParserBase.parse(SolrQueryParserBase.java:270)
-	... 50 more
-
-2020-12-26 12:11:24.079 INFO  (qtp1364767791-19) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:&sort=post_modified+desc&rows=10&wt=json} status=400 QTime=2535
-2020-12-26 12:12:03.312 INFO  (qtp1364767791-23) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:d&sort=post_modified+desc&rows=10&wt=json} hits=7 status=0 QTime=7
-2020-12-26 12:19:24.121 INFO  (qtp1364767791-15) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:в&sort=post_modified+desc&rows=10&wt=json} hits=56308 status=0 QTime=636
-2020-12-26 12:20:42.630 INFO  (qtp1364767791-23) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:в&sort=post_modified+desc&rows=10&wt=json} hits=56308 status=0 QTime=0
-2020-12-26 12:21:14.031 INFO  (qtp1364767791-21) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:в&sort=post_modified+desc&rows=10&wt=json} hits=56308 status=0 QTime=62
-2020-12-26 12:28:07.686 INFO  (qtp1364767791-15) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:D&sort=post_modified+desc&rows=10&wt=json} hits=7 status=0 QTime=1
-2020-12-26 12:29:10.145 INFO  (qtp1364767791-21) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:D&sort=post_modified+desc&rows=10&wt=json} hits=7 status=0 QTime=1
-2020-12-26 12:31:56.873 INFO  (qtp1364767791-19) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:D&sort=post_modified+desc&rows=10&wt=json} hits=7 status=0 QTime=1
-2020-12-26 12:32:01.621 ERROR (qtp1364767791-21) [   x:posts_db] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: org.apache.solr.search.SyntaxError: Cannot parse 'search:': Encountered "<EOF>" at line 1, column 7.
-Was expecting one of:
-    <BAREOPER> ...
-    "(" ...
-    "*" ...
-    <QUOTED> ...
-    <TERM> ...
-    <PREFIXTERM> ...
-    <WILDTERM> ...
-    <REGEXPTERM> ...
-    "[" ...
-    "{" ...
-    <LPARAMS> ...
-    "filter(" ...
-    <NUMBER> ...
-    
-	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:220)
-	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:337)
-	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:214)
-	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2627)
-	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:795)
-	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:568)
-	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:415)
-	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
-	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
-	at org.eclipse.jetty.servlets.CrossOriginFilter.handle(CrossOriginFilter.java:310)
-	at org.eclipse.jetty.servlets.CrossOriginFilter.doFilter(CrossOriginFilter.java:264)
-	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1596)
-	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
-	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
-	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:590)
-	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
-	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)
-	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
-	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
-	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1300)
-	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
-	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
-	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
-	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
-	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1215)
-	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
-	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:221)
-	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177)
-	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
-	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
-	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322)
-	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
-	at org.eclipse.jetty.server.Server.handle(Server.java:500)
-	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
-	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
-	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
-	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
-	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
-	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
-	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
-	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
-	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
-	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
-	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
-	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
-	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
-	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
-	at java.lang.Thread.run(Unknown Source)
-Caused by: org.apache.solr.search.SyntaxError: Cannot parse 'search:': Encountered "<EOF>" at line 1, column 7.
-Was expecting one of:
-    <BAREOPER> ...
-    "(" ...
-    "*" ...
-    <QUOTED> ...
-    <TERM> ...
-    <PREFIXTERM> ...
-    <WILDTERM> ...
-    <REGEXPTERM> ...
-    "[" ...
-    "{" ...
-    <LPARAMS> ...
-    "filter(" ...
-    <NUMBER> ...
-    
-	at org.apache.solr.parser.SolrQueryParserBase.parse(SolrQueryParserBase.java:274)
-	at org.apache.solr.search.LuceneQParser.parse(LuceneQParser.java:49)
-	at org.apache.solr.search.QParser.getQuery(QParser.java:174)
-	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:162)
-	... 47 more
-Caused by: org.apache.solr.parser.ParseException: Encountered "<EOF>" at line 1, column 7.
-Was expecting one of:
-    <BAREOPER> ...
-    "(" ...
-    "*" ...
-    <QUOTED> ...
-    <TERM> ...
-    <PREFIXTERM> ...
-    <WILDTERM> ...
-    <REGEXPTERM> ...
-    "[" ...
-    "{" ...
-    <LPARAMS> ...
-    "filter(" ...
-    <NUMBER> ...
-    
-	at org.apache.solr.parser.QueryParser.generateParseException(QueryParser.java:885)
-	at org.apache.solr.parser.QueryParser.jj_consume_token(QueryParser.java:767)
-	at org.apache.solr.parser.QueryParser.Clause(QueryParser.java:325)
-	at org.apache.solr.parser.QueryParser.Query(QueryParser.java:162)
-	at org.apache.solr.parser.QueryParser.TopLevelQuery(QueryParser.java:131)
-	at org.apache.solr.parser.SolrQueryParserBase.parse(SolrQueryParserBase.java:270)
-	... 50 more
-
-2020-12-26 12:32:01.621 INFO  (qtp1364767791-21) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:&sort=post_modified+desc&rows=10&wt=json} status=400 QTime=228
-2020-12-26 12:32:04.514 INFO  (qtp1364767791-24) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:s&sort=post_modified+desc&rows=10&wt=json} hits=1 status=0 QTime=17
-2020-12-26 12:32:09.633 INFO  (qtp1364767791-21) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:sz&sort=post_modified+desc&rows=10&wt=json} hits=0 status=0 QTime=18
-2020-12-26 12:32:12.995 INFO  (qtp1364767791-15) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:sa&sort=post_modified+desc&rows=10&wt=json} hits=1 status=0 QTime=17
-2020-12-26 12:32:34.566 ERROR (qtp1364767791-21) [   x:posts_db] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: org.apache.solr.search.SyntaxError: Cannot parse 'search:': Encountered "<EOF>" at line 1, column 7.
-Was expecting one of:
-    <BAREOPER> ...
-    "(" ...
-    "*" ...
-    <QUOTED> ...
-    <TERM> ...
-    <PREFIXTERM> ...
-    <WILDTERM> ...
-    <REGEXPTERM> ...
-    "[" ...
-    "{" ...
-    <LPARAMS> ...
-    "filter(" ...
-    <NUMBER> ...
-    
-	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:220)
-	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:337)
-	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:214)
-	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2627)
-	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:795)
-	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:568)
-	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:415)
-	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
-	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1604)
-	at org.eclipse.jetty.servlets.CrossOriginFilter.handle(CrossOriginFilter.java:310)
-	at org.eclipse.jetty.servlets.CrossOriginFilter.doFilter(CrossOriginFilter.java:264)
-	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1596)
-	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
-	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
-	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:590)
-	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
-	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)
-	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
-	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
-	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1300)
-	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
-	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
-	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
-	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
-	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1215)
-	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
-	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:221)
-	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177)
-	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
-	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
-	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322)
-	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
-	at org.eclipse.jetty.server.Server.handle(Server.java:500)
-	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
-	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
-	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
-	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
-	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
-	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
-	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
-	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
-	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
-	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
-	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
-	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
-	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
-	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
-	at java.lang.Thread.run(Unknown Source)
-Caused by: org.apache.solr.search.SyntaxError: Cannot parse 'search:': Encountered "<EOF>" at line 1, column 7.
-Was expecting one of:
-    <BAREOPER> ...
-    "(" ...
-    "*" ...
-    <QUOTED> ...
-    <TERM> ...
-    <PREFIXTERM> ...
-    <WILDTERM> ...
-    <REGEXPTERM> ...
-    "[" ...
-    "{" ...
-    <LPARAMS> ...
-    "filter(" ...
-    <NUMBER> ...
-    
-	at org.apache.solr.parser.SolrQueryParserBase.parse(SolrQueryParserBase.java:274)
-	at org.apache.solr.search.LuceneQParser.parse(LuceneQParser.java:49)
-	at org.apache.solr.search.QParser.getQuery(QParser.java:174)
-	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:162)
-	... 47 more
-Caused by: org.apache.solr.parser.ParseException: Encountered "<EOF>" at line 1, column 7.
-Was expecting one of:
-    <BAREOPER> ...
-    "(" ...
-    "*" ...
-    <QUOTED> ...
-    <TERM> ...
-    <PREFIXTERM> ...
-    <WILDTERM> ...
-    <REGEXPTERM> ...
-    "[" ...
-    "{" ...
-    <LPARAMS> ...
-    "filter(" ...
-    <NUMBER> ...
-    
-	at org.apache.solr.parser.QueryParser.generateParseException(QueryParser.java:885)
-	at org.apache.solr.parser.QueryParser.jj_consume_token(QueryParser.java:767)
-	at org.apache.solr.parser.QueryParser.Clause(QueryParser.java:325)
-	at org.apache.solr.parser.QueryParser.Query(QueryParser.java:162)
-	at org.apache.solr.parser.QueryParser.TopLevelQuery(QueryParser.java:131)
-	at org.apache.solr.parser.SolrQueryParserBase.parse(SolrQueryParserBase.java:270)
-	... 50 more
-
-2020-12-26 12:32:34.566 INFO  (qtp1364767791-21) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:&sort=post_modified+desc&rows=10&wt=json} status=400 QTime=1
-2020-12-26 12:33:54.195 INFO  (qtp1364767791-15) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:z&sort=post_modified+desc&rows=10&wt=json} hits=1 status=0 QTime=18
-2020-12-26 12:33:57.490 INFO  (qtp1364767791-24) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:f&sort=post_modified+desc&rows=10&wt=json} hits=1 status=0 QTime=24
-2020-12-26 12:34:04.431 INFO  (qtp1364767791-21) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:мвд&sort=post_modified+desc&rows=10&wt=json} hits=245 status=0 QTime=9
-2020-12-26 12:34:41.115 INFO  (qtp1364767791-24) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:лол&sort=post_modified+desc&rows=10&wt=json} hits=0 status=0 QTime=56
-2020-12-26 12:34:44.269 INFO  (qtp1364767791-15) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:л&sort=post_modified+desc&rows=10&wt=json} hits=40 status=0 QTime=57
-2020-12-26 12:34:52.185 INFO  (qtp1364767791-21) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:минск&sort=post_modified+desc&rows=10&wt=json} hits=1794 status=0 QTime=48
-2020-12-26 12:35:03.068 INFO  (qtp1364767791-15) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=search:мвд&sort=post_modified+desc&rows=10&wt=json} hits=245 status=0 QTime=0
+2021-01-06 08:42:46.506 INFO  (main) [   ] o.e.j.s.Server jetty-9.4.27.v20200227; built: 2020-02-27T18:37:21.340Z; git: a304fd9f351f337e7c0e2a7c28878dd536149c6c; jvm 1.8.0_261-b12
+2021-01-06 08:42:46.525 INFO  (main) [   ] o.e.j.d.p.ScanningAppProvider Deployment monitor [file:///C:/Windows/solr-7.7.3/solr/server/contexts/] at interval 0
+2021-01-06 08:42:46.880 INFO  (main) [   ] o.e.j.w.StandardDescriptorProcessor NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+2021-01-06 08:42:46.892 INFO  (main) [   ] o.e.j.s.session DefaultSessionIdManager workerName=node0
+2021-01-06 08:42:46.892 INFO  (main) [   ] o.e.j.s.session No SessionScavenger set, using defaults
+2021-01-06 08:42:46.894 INFO  (main) [   ] o.e.j.s.session node0 Scavenging every 660000ms
+2021-01-06 08:42:46.952 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
+2021-01-06 08:42:46.958 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 8.7.0
+2021-01-06 08:42:46.958 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2021-01-06 08:42:46.958 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: C:\Windows\solr-7.7.3\solr
+2021-01-06 08:42:46.958 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2021-01-06T08:42:46.958Z
+2021-01-06 08:42:46.966 INFO  (main) [   ] o.a.s.c.SolrPaths Using system property solr.solr.home: C:\Windows\solr-7.7.3\solr\server\solr
+2021-01-06 08:42:46.971 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from C:\Windows\solr-7.7.3\solr\server\solr\solr.xml
+2021-01-06 08:42:47.054 INFO  (main) [   ] o.a.s.c.SolrXmlConfig MBean server found: com.sun.jmx.mbeanserver.JmxMBeanServer@163e4e87, but no JMX reporters were configured - adding default JMX reporter.
+2021-01-06 08:42:47.759 INFO  (main) [   ] o.a.s.h.c.HttpShardHandlerFactory Host whitelist initialized: WhitelistHostChecker [whitelistHosts=null, whitelistHostCheckingEnabled=true]
+2021-01-06 08:42:47.963 WARN  (main) [   ] o.e.j.u.s.S.config Trusting all certificates configured for Client@523424b5[provider=null,keyStore=null,trustStore=null]
+2021-01-06 08:42:47.963 WARN  (main) [   ] o.e.j.u.s.S.config No Client EndPointIdentificationAlgorithm configured for Client@523424b5[provider=null,keyStore=null,trustStore=null]
+2021-01-06 08:42:48.032 WARN  (main) [   ] o.e.j.u.s.S.config Trusting all certificates configured for Client@3aacf32a[provider=null,keyStore=null,trustStore=null]
+2021-01-06 08:42:48.032 WARN  (main) [   ] o.e.j.u.s.S.config No Client EndPointIdentificationAlgorithm configured for Client@3aacf32a[provider=null,keyStore=null,trustStore=null]
+2021-01-06 08:42:48.076 WARN  (main) [   ] o.a.s.c.CoreContainer Not all security plugins configured!  authentication=disabled authorization=disabled.  Solr is only as secure as you make it. Consider configuring authentication/authorization before exposing Solr to users internal or external.  See https://s.apache.org/solrsecurity for more info
+2021-01-06 08:42:48.201 INFO  (main) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
+2021-01-06 08:42:48.203 INFO  (main) [   ] o.a.s.h.a.MetricsHistoryHandler No .system collection, keeping metrics history in memory.
+2021-01-06 08:42:48.259 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.node' (registry 'solr.node') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@163e4e87
+2021-01-06 08:42:48.260 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.jvm' (registry 'solr.jvm') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@163e4e87
+2021-01-06 08:42:48.264 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.jetty' (registry 'solr.jetty') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@163e4e87
+2021-01-06 08:42:48.294 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath C:\Windows\solr-7.7.3\solr\server\solr
+2021-01-06 08:42:48.295 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [posts_db]
+2021-01-06 08:42:48.370 INFO  (coreLoadExecutor-13-thread-1) [   x:posts_db] o.a.s.c.SolrResourceLoader Added 7 libs to classloader, from paths: [/C:/Windows/solr-7.7.3/solr/dist, /C:/Windows/solr-7.7.3/solr/server/solr/posts_db/lib]
+2021-01-06 08:42:48.519 INFO  (coreLoadExecutor-13-thread-1) [   x:posts_db] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.7.0
+2021-01-06 08:42:48.636 INFO  (main) [   ] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@272113c4{/solr,file:///C:/Windows/solr-7.7.3/solr/server/solr-webapp/webapp/,AVAILABLE}{C:\Windows\solr-7.7.3\solr\server/solr-webapp/webapp}
+2021-01-06 08:42:48.652 INFO  (main) [   ] o.e.j.s.AbstractConnector Started ServerConnector@1329eff{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2021-01-06 08:42:48.652 INFO  (main) [   ] o.e.j.s.Server Started @3187ms
+2021-01-06 08:42:48.664 INFO  (coreLoadExecutor-13-thread-1) [   x:posts_db] o.a.s.s.IndexSchema Schema name=default-config
+2021-01-06 08:42:48.998 INFO  (qtp1364767791-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/logging params={wt=json&_=1609922465556&since=0} status=0 QTime=19
+2021-01-06 08:42:49.057 INFO  (coreLoadExecutor-13-thread-1) [   x:posts_db] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2021-01-06 08:42:49.086 INFO  (coreLoadExecutor-13-thread-1) [   x:posts_db] o.a.s.c.CoreContainer Creating SolrCore 'posts_db' using configuration from instancedir C:\Windows\solr-7.7.3\solr\server\solr\posts_db, trusted=true
+2021-01-06 08:42:49.094 INFO  (coreLoadExecutor-13-thread-1) [   x:posts_db] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.core.posts_db' (registry 'solr.core.posts_db') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@163e4e87
+2021-01-06 08:42:49.108 INFO  (coreLoadExecutor-13-thread-1) [   x:posts_db] o.a.s.c.SolrCore [[posts_db] ] Opening new SolrCore at [C:\Windows\solr-7.7.3\solr\server\solr\posts_db], dataDir=[C:\Windows\solr-7.7.3\solr\server\solr\posts_db\data\]
+2021-01-06 08:42:49.489 WARN  (coreLoadExecutor-13-thread-1) [   x:posts_db] o.a.s.h.d.DataImportHandler Data Import Handler is deprecated as of Solr 8.6. See SOLR-14066 for more details.
+2021-01-06 08:42:49.503 INFO  (coreLoadExecutor-13-thread-1) [   x:posts_db] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2021-01-06 08:42:49.503 INFO  (coreLoadExecutor-13-thread-1) [   x:posts_db] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2021-01-06 08:42:49.519 INFO  (coreLoadExecutor-13-thread-1) [   x:posts_db] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2021-01-06 08:42:49.519 INFO  (coreLoadExecutor-13-thread-1) [   x:posts_db] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2021-01-06 08:42:49.576 INFO  (coreLoadExecutor-13-thread-1) [   x:posts_db] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: C:\Windows\solr-7.7.3\solr\server\solr\posts_db\conf
+2021-01-06 08:42:49.588 INFO  (coreLoadExecutor-13-thread-1) [   x:posts_db] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2021-01-06 08:42:49.594 INFO  (coreLoadExecutor-13-thread-1) [   x:posts_db] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2021-01-06 08:42:49.603 INFO  (coreLoadExecutor-13-thread-1) [   x:posts_db] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2021-01-06 08:42:49.615 INFO  (searcherExecutor-15-thread-1-processing-x:posts_db) [   x:posts_db] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-01-06 08:42:49.615 INFO  (searcherExecutor-15-thread-1-processing-x:posts_db) [   x:posts_db] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2021-01-06 08:42:49.620 INFO  (searcherExecutor-15-thread-1-processing-x:posts_db) [   x:posts_db] o.a.s.c.SolrCore [posts_db]  Registered new searcher autowarm time: 0 ms
+2021-01-06 08:42:53.456 INFO  (qtp1364767791-17) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json} status=0 QTime=19
+2021-01-06 08:42:53.769 INFO  (qtp1364767791-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1609922464441} status=0 QTime=1
+2021-01-06 08:42:53.789 INFO  (qtp1364767791-19) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1609922573757} status=0 QTime=9
+2021-01-06 08:42:53.817 INFO  (qtp1364767791-23) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/replication params={wt=json&command=details&_=1609922573758} status=0 QTime=2
+2021-01-06 08:42:53.820 INFO  (qtp1364767791-16) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1609922464443&ts=1609922464443} status=503 QTime=1
+2021-01-06 08:42:53.852 INFO  (qtp1364767791-19) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/admin/system params={wt=json&_=1609922573757} status=0 QTime=53
+2021-01-06 08:42:53.852 INFO  (qtp1364767791-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1609922464442} status=0 QTime=79
+2021-01-06 08:42:55.252 INFO  (qtp1364767791-21) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/admin/mbeans params={cat=QUERY&wt=json&_=1609922464537} status=0 QTime=0
+2021-01-06 08:42:55.255 INFO  (qtp1364767791-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1609922464441} status=0 QTime=0
+2021-01-06 08:42:55.281 INFO  (qtp1364767791-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1609922464442} status=0 QTime=23
+2021-01-06 08:42:55.290 INFO  (qtp1364767791-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1609922464441} status=0 QTime=0
+2021-01-06 08:42:55.297 INFO  (qtp1364767791-19) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/admin/mbeans params={cat=QUERY&wt=json&_=1609922464537} status=0 QTime=0
+2021-01-06 08:42:55.304 INFO  (qtp1364767791-19) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=show-config&_=1609922464538} status=0 QTime=3
+2021-01-06 08:42:55.319 INFO  (qtp1364767791-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1609922464442} status=0 QTime=15
+2021-01-06 08:42:55.327 INFO  (qtp1364767791-23) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:42:56.761 INFO  (qtp1364767791-15) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:42:58.493 INFO  (qtp1364767791-15) [   x:posts_db] o.a.s.h.d.DataImporter Loading DIH Configuration: data-config.xml
+2021-01-06 08:42:58.507 INFO  (qtp1364767791-15) [   x:posts_db] o.a.s.h.d.c.DIHConfiguration The field :image present in DataConfig does not have a counterpart in Solr Schema
+2021-01-06 08:42:58.507 INFO  (qtp1364767791-15) [   x:posts_db] o.a.s.h.d.DataImporter Data Configuration loaded successfully
+2021-01-06 08:42:58.525 INFO  (qtp1364767791-15) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={core=posts_db&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=full-import&entity=posts&_=1609922464538&verbose=false} status=0 QTime=34
+2021-01-06 08:42:58.525 INFO  (Thread-14) [   ] o.a.s.h.d.DataImporter Starting Full Import
+2021-01-06 08:42:58.538 INFO  (qtp1364767791-22) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:42:58.538 INFO  (Thread-14) [   ] o.a.s.h.d.SimplePropertiesWriter Read dataimport.properties
+2021-01-06 08:42:58.572 INFO  (Thread-14) [   ] o.a.s.h.d.JdbcDataSource Creating a connection for entity posts with URL: jdbc:mysql://localhost:3306/minsknews
+2021-01-06 08:42:58.630 INFO  (Thread-14) [   ] o.a.s.h.d.JdbcDataSource Time taken for getConnection(): 58
+2021-01-06 08:42:58.763 INFO  (qtp1364767791-22) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=1
+2021-01-06 08:43:00.754 INFO  (qtp1364767791-15) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:43:02.754 INFO  (qtp1364767791-22) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:43:04.753 INFO  (qtp1364767791-15) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:43:06.755 INFO  (qtp1364767791-22) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:43:08.757 INFO  (qtp1364767791-15) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:43:10.755 INFO  (qtp1364767791-22) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:43:12.761 INFO  (qtp1364767791-15) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:43:14.762 INFO  (qtp1364767791-22) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:43:16.759 INFO  (qtp1364767791-15) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:43:16.956 INFO  (Thread-14) [   ] o.a.s.h.d.DocBuilder Import completed successfully
+2021-01-06 08:43:17.382 INFO  (searcherExecutor-15-thread-1) [   ] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-01-06 08:43:17.388 INFO  (searcherExecutor-15-thread-1) [   ] o.a.s.c.SolrCore [posts_db]  Registered new searcher autowarm time: 0 ms
+2021-01-06 08:43:17.390 INFO  (Thread-14) [   ] o.a.s.h.d.SimplePropertiesWriter Read dataimport.properties
+2021-01-06 08:43:17.391 INFO  (Thread-14) [   ] o.a.s.h.d.SimplePropertiesWriter Wrote last indexed time to dataimport.properties
+2021-01-06 08:43:17.391 INFO  (Thread-14) [   ] o.a.s.h.d.DocBuilder Time taken = 0:0:18.851
+2021-01-06 08:43:17.391 INFO  (Thread-14) [   ] o.a.s.u.p.LogUpdateProcessorFactory [posts_db]  webapp=/solr path=/dataimport params={core=posts_db&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=full-import&entity=posts&_=1609922464538&verbose=false} status=0 QTime=34{add=[148488 (1688126177987788800), 148497 (1688126178033926144), 148579 (1688126178034974720), 148584 (1688126178036023296), 148602 (1688126178037071872), 148609 (1688126178038120448), 148618 (1688126178038120449), 148614 (1688126178039169024), 148627 (1688126178040217600), 148635 (1688126178040217601), ... (89834 adds)],commit=} 0 18899
+2021-01-06 08:43:18.761 INFO  (qtp1364767791-22) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:43:20.761 INFO  (qtp1364767791-15) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:43:22.761 INFO  (qtp1364767791-22) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:43:24.763 INFO  (qtp1364767791-15) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:43:26.762 INFO  (qtp1364767791-22) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:43:28.761 INFO  (qtp1364767791-15) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:43:30.763 INFO  (qtp1364767791-22) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:43:32.761 INFO  (qtp1364767791-15) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:43:34.763 INFO  (qtp1364767791-22) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:43:36.762 INFO  (qtp1364767791-22) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:43:38.762 INFO  (qtp1364767791-15) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:43:40.762 INFO  (qtp1364767791-22) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:43:42.762 INFO  (qtp1364767791-22) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:43:44.763 INFO  (qtp1364767791-15) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:43:46.763 INFO  (qtp1364767791-22) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:43:48.763 INFO  (qtp1364767791-15) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:43:50.762 INFO  (qtp1364767791-22) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:43:52.762 INFO  (qtp1364767791-15) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:43:54.763 INFO  (qtp1364767791-22) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:43:56.763 INFO  (qtp1364767791-22) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:43:58.764 INFO  (qtp1364767791-15) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=1
+2021-01-06 08:44:00.764 INFO  (qtp1364767791-22) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:44:02.762 INFO  (qtp1364767791-15) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:44:04.763 INFO  (qtp1364767791-22) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:44:06.763 INFO  (qtp1364767791-22) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:44:08.763 INFO  (qtp1364767791-22) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:44:10.764 INFO  (qtp1364767791-15) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=1
+2021-01-06 08:44:12.763 INFO  (qtp1364767791-22) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:44:14.763 INFO  (qtp1364767791-15) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:44:16.763 INFO  (qtp1364767791-22) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:44:18.763 INFO  (qtp1364767791-22) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922464538} status=0 QTime=0
+2021-01-06 08:44:19.316 INFO  (qtp1364767791-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1609922464441} status=0 QTime=0
+2021-01-06 08:44:19.331 INFO  (qtp1364767791-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1609922464442} status=0 QTime=15
+2021-01-06 08:44:21.140 INFO  (qtp1364767791-19) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=*:*&_=1609922659285} hits=89806 status=0 QTime=51
+2021-01-06 08:47:13.271 INFO  (searcherExecutor-15-thread-1-processing-x:posts_db) [   x:posts_db] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-01-06 08:47:13.274 INFO  (searcherExecutor-15-thread-1-processing-x:posts_db) [   x:posts_db] o.a.s.c.SolrCore [posts_db]  Registered new searcher autowarm time: 0 ms
+2021-01-06 08:47:13.298 INFO  (qtp1364767791-15) [   x:posts_db] o.a.s.u.p.LogUpdateProcessorFactory [posts_db]  webapp=/solr path=/update params={stream.body=<delete><query>*:*</query></delete>&commit=true'}{deleteByQuery=*:* (-1688126444751814656),commit=} 0 131
+2021-01-06 08:47:16.732 INFO  (qtp1364767791-22) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1609922836602} status=0 QTime=0
+2021-01-06 08:47:16.759 INFO  (qtp1364767791-24) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1609922836603} status=0 QTime=26
+2021-01-06 08:47:16.806 INFO  (qtp1364767791-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1609922836603} status=0 QTime=18
+2021-01-06 08:47:18.220 INFO  (qtp1364767791-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1609922836602} status=0 QTime=0
+2021-01-06 08:47:18.229 INFO  (qtp1364767791-20) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1609922838207} status=0 QTime=0
+2021-01-06 08:47:18.234 INFO  (qtp1364767791-24) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/replication params={wt=json&command=details&_=1609922838208} status=0 QTime=0
+2021-01-06 08:47:18.252 INFO  (qtp1364767791-24) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1609922836603&ts=1609922836603} status=503 QTime=0
+2021-01-06 08:47:18.256 INFO  (qtp1364767791-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1609922836603} status=0 QTime=33
+2021-01-06 08:47:18.269 INFO  (qtp1364767791-23) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/admin/system params={wt=json&_=1609922838207} status=0 QTime=19
+2021-01-06 08:47:21.707 INFO  (qtp1364767791-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1609922836602} status=0 QTime=0
+2021-01-06 08:47:21.714 INFO  (qtp1364767791-23) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/admin/luke params={show=schema&wt=json&_=1609922838207} status=0 QTime=4
+2021-01-06 08:47:21.756 INFO  (qtp1364767791-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1609922836603} status=0 QTime=47
+2021-01-06 08:47:22.341 INFO  (qtp1364767791-21) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/admin/mbeans params={cat=QUERY&wt=json&_=1609922842326} status=0 QTime=0
+2021-01-06 08:47:22.346 INFO  (qtp1364767791-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1609922836602} status=0 QTime=0
+2021-01-06 08:47:22.367 INFO  (qtp1364767791-24) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1609922836603} status=0 QTime=19
+2021-01-06 08:47:22.383 INFO  (qtp1364767791-21) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/admin/mbeans params={cat=QUERY&wt=json&_=1609922842326} status=0 QTime=0
+2021-01-06 08:47:22.385 INFO  (qtp1364767791-24) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1609922836602} status=0 QTime=2
+2021-01-06 08:47:22.387 INFO  (qtp1364767791-15) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=show-config&_=1609922842326} status=0 QTime=2
+2021-01-06 08:47:22.403 INFO  (qtp1364767791-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1609922836603} status=0 QTime=17
+2021-01-06 08:47:22.421 INFO  (qtp1364767791-21) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:47:26.922 INFO  (qtp1364767791-15) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:47:27.567 INFO  (qtp1364767791-20) [   x:posts_db] o.a.s.h.d.DataImporter Loading DIH Configuration: data-config.xml
+2021-01-06 08:47:27.569 INFO  (qtp1364767791-20) [   x:posts_db] o.a.s.h.d.c.DIHConfiguration The field :image present in DataConfig does not have a counterpart in Solr Schema
+2021-01-06 08:47:27.570 INFO  (qtp1364767791-20) [   x:posts_db] o.a.s.h.d.DataImporter Data Configuration loaded successfully
+2021-01-06 08:47:27.570 INFO  (qtp1364767791-20) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={core=posts_db&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=full-import&entity=posts&_=1609922842326&verbose=false} status=0 QTime=4
+2021-01-06 08:47:27.570 INFO  (Thread-15) [   ] o.a.s.h.d.DataImporter Starting Full Import
+2021-01-06 08:47:27.576 INFO  (Thread-15) [   ] o.a.s.h.d.SimplePropertiesWriter Read dataimport.properties
+2021-01-06 08:47:27.583 INFO  (Thread-15) [   ] o.a.s.h.d.JdbcDataSource Creating a connection for entity posts with URL: jdbc:mysql://localhost:3306/minsknews
+2021-01-06 08:47:27.589 INFO  (Thread-15) [   ] o.a.s.h.d.JdbcDataSource Time taken for getConnection(): 5
+2021-01-06 08:47:27.598 INFO  (qtp1364767791-24) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:47:28.920 INFO  (qtp1364767791-24) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:47:30.919 INFO  (qtp1364767791-20) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:47:33.904 INFO  (qtp1364767791-24) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:47:35.896 INFO  (qtp1364767791-24) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:47:37.909 INFO  (qtp1364767791-24) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:47:39.890 INFO  (qtp1364767791-24) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:47:41.905 INFO  (qtp1364767791-24) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:47:42.931 INFO  (qtp1364767791-20) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:47:46.182 INFO  (qtp1364767791-20) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:47:46.419 INFO  (Thread-15) [   ] o.a.s.h.d.DocBuilder Import completed successfully
+2021-01-06 08:47:46.669 INFO  (searcherExecutor-15-thread-1) [   ] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2021-01-06 08:47:46.689 INFO  (searcherExecutor-15-thread-1) [   ] o.a.s.c.SolrCore [posts_db]  Registered new searcher autowarm time: 0 ms
+2021-01-06 08:47:46.689 INFO  (Thread-15) [   ] o.a.s.h.d.SimplePropertiesWriter Read dataimport.properties
+2021-01-06 08:47:46.690 INFO  (Thread-15) [   ] o.a.s.h.d.SimplePropertiesWriter Wrote last indexed time to dataimport.properties
+2021-01-06 08:47:46.690 INFO  (Thread-15) [   ] o.a.s.h.d.DocBuilder Time taken = 0:0:19.112
+2021-01-06 08:47:46.690 INFO  (Thread-15) [   ] o.a.s.u.p.LogUpdateProcessorFactory [posts_db]  webapp=/solr path=/dataimport params={core=posts_db&indent=on&commit=true&name=dataimport&clean=false&wt=json&command=full-import&entity=posts&_=1609922842326&verbose=false} status=0 QTime=4{add=[148488 (1688126459926806528), 148497 (1688126459931000832), 148579 (1688126459931000833), 148584 (1688126459931000834), 148602 (1688126459931000835), 148609 (1688126459931000836), 148618 (1688126459931000837), 148614 (1688126459931000838), 148627 (1688126459931000839), 148635 (1688126459932049408), ... (89834 adds)],commit=} 0 19123
+2021-01-06 08:47:47.900 INFO  (qtp1364767791-20) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:47:49.899 INFO  (qtp1364767791-24) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:47:51.900 INFO  (qtp1364767791-20) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:47:53.904 INFO  (qtp1364767791-20) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:47:55.892 INFO  (qtp1364767791-20) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:47:57.926 INFO  (qtp1364767791-20) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:47:59.894 INFO  (qtp1364767791-20) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:48:01.897 INFO  (qtp1364767791-20) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:48:03.901 INFO  (qtp1364767791-20) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:48:05.903 INFO  (qtp1364767791-20) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:48:07.906 INFO  (qtp1364767791-24) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:48:09.907 INFO  (qtp1364767791-20) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:48:11.910 INFO  (qtp1364767791-24) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:48:13.907 INFO  (qtp1364767791-24) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:48:15.910 INFO  (qtp1364767791-20) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:48:17.907 INFO  (qtp1364767791-20) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:48:19.914 INFO  (qtp1364767791-20) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:48:21.913 INFO  (qtp1364767791-24) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:48:23.897 INFO  (qtp1364767791-24) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:48:25.905 INFO  (qtp1364767791-24) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:48:27.902 INFO  (qtp1364767791-20) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:48:29.904 INFO  (qtp1364767791-20) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:48:31.893 INFO  (qtp1364767791-20) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:48:33.905 INFO  (qtp1364767791-20) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:48:35.895 INFO  (qtp1364767791-20) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:48:37.905 INFO  (qtp1364767791-20) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:48:39.905 INFO  (qtp1364767791-20) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:48:41.930 INFO  (qtp1364767791-20) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:48:43.899 INFO  (qtp1364767791-24) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:48:45.896 INFO  (qtp1364767791-20) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:48:47.905 INFO  (qtp1364767791-24) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:48:49.910 INFO  (qtp1364767791-20) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:48:51.067 INFO  (qtp1364767791-20) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:48:52.925 INFO  (qtp1364767791-20) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/dataimport params={indent=on&wt=json&command=status&_=1609922842326} status=0 QTime=0
+2021-01-06 08:48:54.243 INFO  (qtp1364767791-24) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1609922836602} status=0 QTime=0
+2021-01-06 08:48:54.261 INFO  (qtp1364767791-15) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1609922836603} status=0 QTime=18
+2021-01-06 08:48:55.395 INFO  (qtp1364767791-21) [   x:posts_db] o.a.s.c.S.Request [posts_db]  webapp=/solr path=/select params={q=*:*&_=1609922934219} hits=89806 status=0 QTime=15
+2021-01-06 08:49:06.662 INFO  (ShutdownMonitor) [   ] o.e.j.s.AbstractConnector Stopped ServerConnector@1329eff{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2021-01-06 08:49:06.663 INFO  (ShutdownMonitor) [   ] o.e.j.s.session node0 Stopped scavenging
+2021-01-06 08:49:06.664 INFO  (ShutdownMonitor) [   ] o.a.s.c.CoreContainer Shutting down CoreContainer instance=1600594643
+2021-01-06 08:49:06.665 INFO  (coreCloseExecutor-21-thread-1) [   ] o.a.s.c.SolrCore [posts_db]  CLOSING SolrCore org.apache.solr.core.SolrCore@2c970c49
+2021-01-06 08:49:06.665 INFO  (coreCloseExecutor-21-thread-1) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.posts_db tag=SolrCore@2c970c49
+2021-01-06 08:49:06.665 INFO  (coreCloseExecutor-21-thread-1) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@77d34f: rootName = null, domain = solr.core.posts_db, service url = null, agent id = null] for registry solr.core.posts_db/com.codahale.metrics.MetricRegistry@39faddce
+2021-01-06 08:49:06.677 INFO  (coreCloseExecutor-21-thread-1) [   ] o.a.s.u.DirectUpdateHandler2 Committing on IndexWriter.close()  ... SKIPPED (unnecessary).
+2021-01-06 08:49:06.687 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node tag=null
+2021-01-06 08:49:06.688 INFO  (ShutdownMonitor) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@d400943: rootName = null, domain = solr.node, service url = null, agent id = null] for registry solr.node/com.codahale.metrics.MetricRegistry@45ac92a
+2021-01-06 08:49:06.690 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm tag=null
+2021-01-06 08:49:06.690 INFO  (ShutdownMonitor) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@14bae047: rootName = null, domain = solr.jvm, service url = null, agent id = null] for registry solr.jvm/com.codahale.metrics.MetricRegistry@457f3f45
+2021-01-06 08:49:06.690 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty tag=null
+2021-01-06 08:49:06.691 INFO  (ShutdownMonitor) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@7ed9ae94: rootName = null, domain = solr.jetty, service url = null, agent id = null] for registry solr.jetty/com.codahale.metrics.MetricRegistry@5df42edd
+2021-01-06 08:49:06.698 INFO  (ShutdownMonitor) [   ] o.e.j.s.h.ContextHandler Stopped o.e.j.w.WebAppContext@272113c4{/solr,null,UNAVAILABLE}{C:\Windows\solr-7.7.3\solr\server/solr-webapp/webapp}
